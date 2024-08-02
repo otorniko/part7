@@ -1,0 +1,33 @@
+{
+    "name": "bloglist",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "NODE_ENV=production node index.js",
+        "dev": "NODE_ENV=development nodemon index.js",
+        "start:test": "NODE_ENV=test node index.js",
+        "test": "NODE_ENV=test node --test --test-reporter dot --test-concurrency=1",
+        "test:tap": "NODE_ENV=test node --test --test-reporter tap --test-concurrency=1",
+        "test:node": "NODE_ENV=test node --test --test-concurrency=1 tests/api_tests/*.test.js",
+        "test:only": "NODE_ENV=test node --test --test-only --test-concurrency=1 tests/api_tests/*.test.js",
+        "test:coverage": "NODE_ENV=test node --test --test-concurrency=1 --experimental-test-coverage"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "express-async-errors": "^3.1.1",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.4.3",
+        "mongoose-unique-validator": "^5.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.3",
+        "supertest": "^7.0.0"
+    }
+}
